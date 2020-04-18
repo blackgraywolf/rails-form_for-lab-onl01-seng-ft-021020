@@ -2,33 +2,33 @@
 class StudentsController < ApplicationController
   
   def index
-  @students1 =  Student.all
+  @students =  Student.all
   end
   
    def new
     
-    @student2 = Student.new
+    @student = Student.new
     
     end
     
    def create
     # binding.pry
-      @student3 = Student.create(params.require(:student).permit(:first_name, :last_name))
-        redirect_to student_path(@student3)
+      @student = Student.create(params.require(:student).permit(:first_name, :last_name))
+        redirect_to student_path(@student)
      end
       
     def show
-        @student4 = Student.find(params[:id])
+        @student = Student.find(params[:id])
     end 
 
     def edit
-        @student5 = Student.find(params[:id])
+        @student = Student.find(params[:id])
     end 
         
      def update
-        @student6 = Student.find(params[:id])
-        @student6.update(params.require(:student).permit(:first_name, :last_name))
-        redirect_to student_path(@student6)
+        @student = Student.find(params[:id])
+        @student.update(params.require(:student).permit(:first_name, :last_name))
+        redirect_to student_path(@student)
     end 
     
 end

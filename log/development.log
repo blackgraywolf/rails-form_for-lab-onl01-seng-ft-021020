@@ -214,3 +214,12 @@ Completed 302 Found in 51ms (ActiveRecord: 23.3ms)
 
 
 Started GET "/students/1" for 74.192.181.116 at 2020-04-18 20:47:04 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 337ms (Views: 314.2ms | ActiveRecord: 1.1ms)
+
+

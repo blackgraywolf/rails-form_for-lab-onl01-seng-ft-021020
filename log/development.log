@@ -213,3 +213,4 @@ Redirected to http://142.93.113.210:55309/students/1
 Completed 302 Found in 51ms (ActiveRecord: 23.3ms)
 
 
+Started GET "/students/1" for 74.192.181.116 at 2020-04-18 20:47:04 +0000
